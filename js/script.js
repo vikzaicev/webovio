@@ -119,7 +119,7 @@ popup.append(menu.cloneNode(1));
 hamb.addEventListener('click', hamburger);
 
 function hamburger() {
-   hamb.classList.toggle('active');
+   hamb.classList.toggle('activ');
    popup.classList.toggle('open');
    body.classList.toggle('noscrol');
 };
@@ -196,7 +196,7 @@ myArrey.forEach(function el(el) {
 
 newaArr = (a) => {
    if (a >= 0) {
-      console.log (a - 1);
+      console.log(a - 1);
    }
    else {
       console.log(`a <= 0`);
@@ -204,3 +204,58 @@ newaArr = (a) => {
 }
 newaArr(5);
 
+function balance(book) {
+   let arr = book.replace(/[^\w\s .]/gi, '').split('\n')
+   console.log(arr);
+   let res = []
+   let balance = +arr[0]
+   res.push(`Original Balance: ${arr[0]}`)
+   for (let i = 1; i < arr.length; i++) {
+      const element = arr[i];
+      //console.log(+el[el.length - 1]);
+      if (el.length > 2) {
+         let e = el.slice(0, 2).join(" ")
+         console.log(e);
+         res.push(`${el.slice(0, 2).join(" ")} ${(+el[el.length - 1]).toFixed(2)} Balance ${(balance - +el[el.length - 1]).toFixed(2)}`)
+         balance = (balance - +el[el.length - 1]).toFixed(2)
+      }
+   }
+   res.push(`Total expense ${(+arr[0] - balance).toFixed(2)}`)
+   console.log(res.length);
+   res.push(`Average expense ${(((+arr[0] - balance).toFixed(2) / (res.length - 2)).toFixed(2))}`)
+   console.log(res.join("\r\n"));
+}
+//balance(`1233.00
+//125 Hardware;! 24.8?;
+//123 Flowers 93.5
+//127 Meat 120.90
+//120 Picture 34.00
+//124 Gasoline 11.00
+//123 Photos;! 71.4?;
+//122 Picture 93.5
+//132 Tyres;! 19.00,?;
+//129 Stamps 13.6
+//129 Fruits{} 17.6
+//129 Market;! 128.00?;
+//121 Gasoline;! 13.6?;`)
+
+function squares(x, n) {
+   let res = []
+   while (res.length < n) {
+      res.push(x)
+      x = x ** 2
+   }
+   console.log(res);
+}
+squares(5, 3)
+
+function nbYear(p0, percent, aug, p) {
+   let count = 0
+   while(p0 < p) {
+      p0 = Math.floor(p0 + ((p0 / 100) * percent) + aug)
+      count++
+      console.log(p0);
+   }
+   console.log(count);
+}
+nbYear(1000, 2, 50, 1214)

@@ -69,6 +69,10 @@ main {
 		}
 	}
 
+	&__hamb.activ {
+		background-color: #127eeb;
+	}
+
 	&__ham1 {
 		position: absolute;
 		display: inline-block;
@@ -144,9 +148,14 @@ main {
 		}
 	}
 }
-.header__hamb.active:nth-child(1) {
-	background-color: #fff;
-	transform: scale(0);
+.header__hamb.activ {
+    background-color: #c92020;
+}
+
+.header__hamb.activ:nth-child(2){
+	top: 0px;
+   left: 0px;
+   background: rgb(197, 18, 18);
 }
 .menu {
 	&__list {
@@ -225,6 +234,9 @@ main {
 	height: 100%;
 	top: 0;
 	left: -20px;
+}
+.header__hamb.activ {
+    background-color: #c92020;
 }
 
 /*=================================*/
